@@ -1,1 +1,7 @@
-# MLP
+implemented the backpropagation algorithm for an MLP with an arbitrary number of layers and neurons, using any choice of activation functions. The model had to be built from scratch without using toolboxes or high-level libraries. The network was trained using mini-batch SGD, and activation functions along with their derivatives were manually defined.
+
+Training was done on the MNIST dataset after normalization. A validation set was also created from part of the training data. Different shallow architectures were tested by varying the number of neurons in the first two hidden layers, and the effect of different learning rates (mu = 0.001, 0.01, 0.1, 1) on performance was compared.
+
+Several optimization algorithms were implemented and evaluated, including Nesterov Momentum, Adagrad, RMSProp, and Adam. The depth of the network was then increased from 3 to 10 layers, and the norm of the weight matrices during training was analyzed to observe the vanishing gradient problem. ReLU activation and Xavier initialization were later introduced to see if they improved training dynamics.
+
+The output layer was modified to use Softmax with Cross-Entropy loss, and the results were compared against the Mean Squared Error approach. Finally, PCA was applied to reduce input dimensionality, treating the number of components as a hyperparameter, and its impact on network accuracy and error was analyzed.
